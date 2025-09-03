@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pool Billiard - Virtual Casino Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎱 Pool Billiard Virtual Casino</h1>
+            <div class="disclaimer">
+                <p><strong>⚠️ EDUCATIONAL PURPOSES ONLY</strong> - No real money involved. Virtual currency only.</p>
+            </div>
+        </header>
+
+        <div class="game-info">
+            <div class="player-stats">
+                <div class="virtual-money">
+                    <span class="label">Virtual Coins:</span>
+                    <span id="virtualMoney">1000</span> 💰
+                </div>
+                <div class="current-bet">
+                    <span class="label">Current Bet:</span>
+                    <span id="currentBet">50</span> 💰
+                </div>
+                <div class="games-played">
+                    <span class="label">Games Played:</span>
+                    <span id="gamesPlayed">0</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="betting-section">
+            <h3>Place Your Virtual Bet</h3>
+            <div class="bet-controls">
+                <button onclick="setBet(25)">25 💰</button>
+                <button onclick="setBet(50)">50 💰</button>
+                <button onclick="setBet(100)">100 💰</button>
+                <button onclick="setBet(200)">200 💰</button>
+            </div>
+        </div>
+
+        <div class="game-area">
+            <canvas id="poolTable" width="800" height="400"></canvas>
+            <div class="game-controls">
+                <button id="shootBtn" onclick="shootBall()">🎯 Shoot Ball</button>
+                <button id="newGameBtn" onclick="startNewGame()">🎮 New Game</button>
+                <button id="addCoinsBtn" onclick="addVirtualCoins()">➕ Add Virtual Coins</button>
+            </div>
+        </div>
+
+        <div class="game-results">
+            <h3>Game Results</h3>
+            <div id="gameMessage">Welcome! Place a bet and start playing!</div>
+            <div class="earnings-history">
+                <h4>Recent Earnings History</h4>
+                <ul id="earningsHistory"></ul>
+            </div>
+        </div>
+
+        <footer>
+            <p>This is a demonstration of game mechanics using virtual currency only.</p>
+            <p>No real money gambling - Educational and entertainment purposes only.</p>
+        </footer>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
